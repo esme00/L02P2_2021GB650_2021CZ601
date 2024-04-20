@@ -10,6 +10,14 @@
 </head>
 <body>
     <header>
+
+        <nav class="navbar w-100" style="background-color: blue;">
+            <div class="row w-100">
+                <img class="container" src="imagenes/logo-UNICAES-png.png" style="max-width: 100px;" alt="">
+                <h1 href="#" style="text-align: center; color: white;">Creación de Libros</h1>    
+          </div>
+        </nav>
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">L02P2_2021GB650_2021CZ601</a>
@@ -34,18 +42,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="categorias" asp-action="Index">categorias</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="clientes" asp-action="Index">clientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="comentarios_libros" asp-action="Index">comentarios_libros</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="pedido_detalle" asp-action="Index">pedido_detalle</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="pedido_encabezado" asp-action="Index">pedido_encabezado</a>
-                        </li>
+               
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="libros" asp-action="Index">libros</a>
                         </li>
@@ -62,9 +59,10 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - L02P2_2021GB650_2021CZ601 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted" style="background-color: blue;">
+        <div class="container w-100">
+            <h3 class="text-center" style="color: white;">2024-20-04 : Jorge Francisco Cisneros Zometa</h3>
+            <h3 class="text-center" style="color: white;">2024-20-04 : Esmeralda Noemi Garcia Borja</h3>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
