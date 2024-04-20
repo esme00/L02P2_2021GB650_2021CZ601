@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using L02P2_2021GB650_2021CZ601.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<libreriaContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("equiposDbConnection")
+        )
+);
+
 
 var app = builder.Build();
 
