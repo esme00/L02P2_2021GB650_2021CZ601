@@ -1,16 +1,10 @@
 ﻿
-<form asp-action="SubirArchivo" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="archivo">Subir</label>
-        <input type="file" class="form-control" id="archivo" name="archivo" />
-    </div>
-    <button type="submit" class="my-5 btn btn-warning mb-2">Subir archivos</button>
-</form>
-<form asp-action="CrearLibros">
+<form asp-action="CrearLibros" method="post" enctype="multipart/form-data">
     @*Inicio del Formulario*@
     <div class="form-group row mb-4">
 
         @*NOMBRE*@
+        <input type="file" class="form-control" id="archivo" name="archivo" />
 
         <div class="row mt-3">
             <div class="col-sm-2">

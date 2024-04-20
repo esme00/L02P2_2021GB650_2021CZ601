@@ -71,7 +71,7 @@ namespace L02P2_2021GB650_2021CZ601.Controllers
                     AuthTokenAsyncFactory = () => Task.FromResult(tokenuser),
                     ThrowOnCancel = true
                 }
-            ).Child("Archivos")
+            ).Child("libros")
             .Child(nombreArchivo)
             .PutAsync(archivoSubir, cancellation.Token);
 
