@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<libreriaContext>(options =>
     options.UseSqlServer(
-        builder.Configuration.GetConnectionString("equiposDbConnection")
+        builder.Configuration.GetConnectionString("libreriaDbConnection")
         )
 );
 
