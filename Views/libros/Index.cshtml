@@ -1,4 +1,11 @@
 ﻿
+<form asp-action="SubirArchivo" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="archivo">Subir</label>
+        <input type="file" class="form-control" id="archivo" name="archivo" />
+    </div>
+    <button type="submit" class="my-5 btn btn-warning mb-2">Subir archivos</button>
+</form>
 <form asp-action="CrearLibros">
     @*Inicio del Formulario*@
     <div class="form-group row mb-4">
@@ -48,7 +55,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                @Html.DropDownList("id", ViewData["listadodeautores"] as SelectList, "Seleccione un Autor", new { @class = "form-control" })
+                @Html.DropDownList("id_autor", ViewData["listadodeautores"] as SelectList, "Seleccione un Autor", new { @class = "form-control" })
             </div>
             @* Categoria *@
             <div class="col-sm-2">
@@ -57,7 +64,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                @Html.DropDownList("id", ViewData["listadodecategoria"] as SelectList, "Seleccione la categoria", new { @class = "form-control" })
+                @Html.DropDownList("id_categoria", ViewData["listadodecategoria"] as SelectList, "Seleccione la categoria", new { @class = "form-control" })
             </div>
 
         </div>
