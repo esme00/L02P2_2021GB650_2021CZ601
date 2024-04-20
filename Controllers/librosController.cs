@@ -9,7 +9,7 @@ namespace L02P2_2021GB650_2021CZ601.Controllers
         {
             return View();
         }
-        public IActionResult CrearEquipos(libros nuevoLibro)
+        public IActionResult CrearLibros(libros nuevoLibro)
         {
             _libreriaContext.Add(nuevoLibro);
             _libreriaContext.SaveChanges();

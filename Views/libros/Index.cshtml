@@ -1,5 +1,42 @@
 ﻿<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Creación de Libros</a>
     </div>
 </nav>
+<form asp-action="CrearLibros">
+    @*Inicio del Formulario*@
+    <div class="form-group row mb-4">
+
+        @*NOMBRE*@
+
+        <div class="row mt-3">
+            <div class="col-sm-2">
+                <label>
+                    Nombre
+                </label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextBox("nombre", "", new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row mt-3">
+
+            @* DIRECCION *@
+
+            <div class="col-sm-2">
+                @Html.Label("lblDescripcion", "Descripción")
+            </div>
+            <div class="col-sm-4">
+                @Html.TextArea("descripcion", "", new { @class = "form-control", @placeHolder = "Ingrese la descripción" })
+            </div>
+
+            @*FIN DIRECCION *@
+
+        </div>
+
+
+        @* FIN FORMULARIO *@
+    </div>
+
+</form>
+
