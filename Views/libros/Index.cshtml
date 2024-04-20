@@ -93,6 +93,11 @@
 
                         <td>@libro.autor</td>
                         <td>@libro.categoria</td>
+
+                        <td>
+                            <!-- Columna para botones de acción -->
+                            <a href="@Url.Action("Delete", "libros", new { id = libro.id })" class="btn btn-danger">Eliminar</a>
+                        </td>
                         </tr>
                        
                     }
