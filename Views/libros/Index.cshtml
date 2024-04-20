@@ -34,6 +34,39 @@
 
         </div>
 
+        <div class="row mt-3">
+            @* PRECIO *@
+            <div class="col-sm-2">
+                <label>
+                    Precio
+                </label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextBox("precio", "", new { @class = "form-control" })
+            </div>
+
+            @* Autor *@
+            <div class="col-sm-2">
+                <label>
+                    Autor
+                </label>
+            </div>
+            <div class="col-sm-4">
+                @Html.DropDownList("id", ViewData["listadodeautores"] as SelectList, "Seleccione un Autor", new { @class = "form-control" })
+            </div>
+            @* Categoria *@
+            <div class="col-sm-2">
+                <label>
+                    Categoria o Genero
+                </label>
+            </div>
+            <div class="col-sm-4">
+                @Html.DropDownList("id", ViewData["listadodecategoria"] as SelectList, "Seleccione la categoria", new { @class = "form-control" })
+            </div>
+
+        </div>
+
+
 
         @* FIN FORMULARIO *@
     </div>
