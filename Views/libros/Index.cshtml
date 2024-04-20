@@ -37,7 +37,7 @@
                     Precio
                 </label>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 @Html.TextBox("precio", "", new { @class = "form-control" })
             </div>
 
@@ -47,7 +47,7 @@
                     Autor
                 </label>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 @Html.DropDownList("id", ViewData["listadodeautores"] as SelectList, "Seleccione un Autor", new { @class = "form-control" })
             </div>
             @* Categoria *@
@@ -56,11 +56,43 @@
                     Categoria o Genero
                 </label>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 @Html.DropDownList("id", ViewData["listadodecategoria"] as SelectList, "Seleccione la categoria", new { @class = "form-control" })
             </div>
 
         </div>
+         @*BTN GUARDADO*@
+            <div class="form-group row mb-4">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4" style="margin-top: 20px;">
+                    <input type="submit" class="btn-primary" value="Guardar" />
+                </div>
+            </div>
+            @* FIN BTN GUARDADO*@
+
+
+            <table class="table table-sm">
+                <thead>
+                    <tr class="text-md-center">
+                        <th>Equipo</th>
+                        <th>Descripción</th>
+                        <th>Marca</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var equipo in (IEnumerable<dynamic>)ViewData["listadodeequipo"])
+                    {
+                        <tr>
+                            <td>@equipo.nombre</td>
+                            <td>@equipo.descripcion</td>
+                            <td>@equipo.marca_nombre</td>
+                        </tr>
+                       
+                    }
+                </tbody>
+            </table>
+            @* FIN TABLA*@
 
 
 

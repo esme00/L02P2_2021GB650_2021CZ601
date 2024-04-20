@@ -15,6 +15,17 @@ namespace L02P2_2021GB650_2021CZ601.Controllers
             var listaCat = (from m in _libreriaContext.categorias
                                 select m).ToList();
             ViewData["listadodecategoria"] = new SelectList(listaCat, "id", "categoria");
+
+            var listadodeequipo = (from e in _equiposContext.equipos
+                                   join m in _equiposContext.marcas on e.marca_id equals m.marca_id
+                                   select new
+                                   {
+                                       nombre = e.nombre,
+                                       descripcion = e.descripcion,
+                                       marca_id = e.marca_id,
+                                       marca_nombre = m.nombre_marca
+                                   }).ToList();
+            ViewData["listadodeequipo"] = listadodeequipo;
             return View();
         }
         public IActionResult CrearLibros(libros nuevoLibro)
