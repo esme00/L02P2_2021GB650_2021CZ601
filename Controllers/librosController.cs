@@ -16,14 +16,17 @@ namespace L02P2_2021GB650_2021CZ601.Controllers
                                 select m).ToList();
             ViewData["listadodecategoria"] = new SelectList(listaCat, "id", "categoria");
 
-            var listadodeequipo = (from e in _equiposContext.equipos
-                                   join m in _equiposContext.marcas on e.marca_id equals m.marca_id
+            var listadodeequipo = (from e in _libreriaContext.libros
+                                   join m in _libreriaContext.autores on e.id_autor equals m.id
+                                   join z in _libreriaContext.categorias on e.id_categoria equals z.id
                                    select new
                                    {
                                        nombre = e.nombre,
                                        descripcion = e.descripcion,
-                                       marca_id = e.marca_id,
-                                       marca_nombre = m.nombre_marca
+                                       precio = e.precio,
+                                       autor = m.id,
+                                       categoria = z.id
+                                     
                                    }).ToList();
             ViewData["listadodeequipo"] = listadodeequipo;
             return View();

@@ -75,18 +75,23 @@
             <table class="table table-sm">
                 <thead>
                     <tr class="text-md-center">
-                        <th>Equipo</th>
+                        <th>Nombre del Libro</th>
                         <th>Descripción</th>
-                        <th>Marca</th>
+                        <th>Precio</th>
+                    <th>Autor</th>
+                    <th>Categoria</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var equipo in (IEnumerable<dynamic>)ViewData["listadodeequipo"])
+                    @foreach (var libro in (IEnumerable<dynamic>)ViewData["listadodeequipo"])
                     {
                         <tr>
-                            <td>@equipo.nombre</td>
-                            <td>@equipo.descripcion</td>
-                            <td>@equipo.marca_nombre</td>
+                        <td>@libro.nombre</td>
+                        <td>@libro.descripcion</td>
+                        <td>@libro.precio</td>
+
+                        <td>@libro.autor</td>
+                        <td>@libro.categoria</td>
                         </tr>
                        
                     }
