@@ -56,10 +56,10 @@ namespace L02P2_2021GB650_2021CZ601.Controllers
 
         public async Task<string> SubirImagenAFirebase(Stream archivoSubir, string nombreArchivo)
         {
-            string email = "jorgefranciscocz@gmail.com";
-            string clave = "ContraseñaXDXD";
-            string ruta = "desarolloweb-7ffb8.appspot.com";
-            string apikey = "AIzaSyBbIwF8pmsda6lLtldYsro7e_Aa_SCNGq0";
+            string email = "";
+            string clave = "";
+            string ruta = "";
+            string apikey = "";
 
             var auth = new FirebaseAuthProvider(new FirebaseConfig(apikey));
             var autentificar = await auth.SignInWithEmailAndPasswordAsync(email, clave);
